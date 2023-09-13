@@ -801,9 +801,7 @@ plot28=ggplot(pos_sub, aes(Recent_vaccination_time)) + labs(y='percent',x='Lates
   geom_bar(aes(fill=Symptom_improvement_time), position="fill")+scale_fill_manual(values = my36colors)+theme_bw()
 plot28
 
-ggsave('不同接种时间好转时间分布.pdf',plot26,width = 8,height = 3)
-
-#29 不同疫苗背景间好转时间分布 Distribution of improvement time among participants in different vaccine combinations
+#29 Distribution of improvement time among participants in different vaccine combinations
 a=pos
 a$Vaccine_backgrounds[a$Vaccination == 0 ] = "0"
 a$Vaccine_backgrounds[a$Vaccination == 1 & a$First_dose_of_vaccine ==  1] = "1" #1 needle inactivation
